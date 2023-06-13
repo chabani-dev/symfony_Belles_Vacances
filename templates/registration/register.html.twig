@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+
+     {{ form_start(registrationForm, {
+        'attr':{
+            'class':'registration'
+        }
+    }) }}
+        <div>
+            <label for="inputLogin">Votre login :</label>
+            {{ form_widget(registrationForm.login, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputLogin',
+                }
+            })}}
+        </div>    
+
+     <div>
+            <label for="inputName">Votre nom :</label>
+            {{ form_widget(registrationForm.name, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputName',
+                }
+            })}}
+        </div>    
+    <div>
+            <label for="inputFirstname">Votre prénom :</label>
+            {{ form_widget(registrationForm.firstname, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputFirstname',
+                }
+            })}}
+        </div> 
+   <div>
+            <label for="inputEmail">Votre email :</label>
+            {{ form_widget(registrationForm.email, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputEmail',
+                }
+            })}}
+        </div>   
+
+        <div>
+            <label for="inputAddress">Votre adresse :</label>
+            {{ form_widget(registrationForm.address, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputAddress',
+                }
+            })}}
+        </div>   
+         <div>
+            <label for="inputBirthdate">Votre date de naissance :</label>
+            {{ form_widget(registrationForm.birthDate, {
+                'attr':{
+                    'id':'inputBirthdate',
+                }
+            })}}
+        </div>  
+         <div>
+            <label for="inputzipcode">Code postal :</label>
+            {{ form_widget(registrationForm.zipcode, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputZipCode',
+                }
+            })}}
+        </div>  
+        <div>
+            <label for="inputVille">Ville :</label>
+            {{ form_widget(registrationForm.ville, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputTown',
+                }
+            })}}
+        </div> 
+        <div>
+            <label for="inputtelephone">Telephone :</label>
+            {{ form_widget(registrationForm.telephone, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputtelephone',
+                }
+            })}}
+        </div> 
+         <div>
+            <label for="inputPassword">Mot de passe :</label>
+            {{ form_widget(registrationForm.plainPassword, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputPassword',
+                }
+            })}}
+        </div>    
+        {# {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }} #}
+        {{ form_row(registrationForm.agreeTerms) }}
+<div class='button'>
+<button type="submit" class="btn">Register</button></div>
+        
+    {{ form_end(registrationForm) }}
+{% endblock %}

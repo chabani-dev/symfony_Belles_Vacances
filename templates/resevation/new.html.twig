@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Resevation{% endblock %}
+
+{% block body %}
+    <h1>Create new Resevation</h1>
+
+    {{ include('resevation/_form.html.twig') }}
+
+    <a href="{{ path('app_resevation_index') }}">back to list</a>
+{% endblock %}

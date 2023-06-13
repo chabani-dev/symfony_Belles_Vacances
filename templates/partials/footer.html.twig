@@ -1,0 +1,10 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+<footer>
+    <nav>
+        {% if app.request.get('_route') != 'app_home' %}
+        <a href="{{ path('app_home') }}">retour vers l'accueil</a>
+        {% endif %}
+    </nav>
+</footer>

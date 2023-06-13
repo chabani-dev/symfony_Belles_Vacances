@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+
+{% if app.user %}
+<h1>Votre profil</h1>
+<p>Nom : {{ app.user.name|capitalize }}</p>
+<p>Prénom : {{ app.user.firstname|capitalize }}</p>
+<p>Votre email de contact : {{ app.user.email }}</p>
+<p>Né(e) le : 
+    {% if app.user.birthDate %}
+        {{ app.user.birthDate|date('d/m/Y') }}
+    {% else %}
+        non-renseignée
+    {% endif %}
+</p>
+{% else %}
+<h1>Vous n'êtes pas connecté(e)</h1>
+{% endif %}
+{% endblock %}
